@@ -1,0 +1,54 @@
+/* css personalizado */
+.linhaCyan {
+    background: cyan;
+   
+}
+
+.bg-color-padding p{
+    padding:15px;
+}
+.bgchocolate{
+    background: chocolate;
+     color: white;
+    text-align: center;
+}
+.bgchocolate1{
+    background: chocolate;
+     color: white;
+   
+}
+
+.bgbeige{
+    background: beige;
+    height: 800px;
+}
+
+@media 750px:
+
+.bgsnow1{
+    background: snow1;
+  
+}
+
+.bgchocolate h3{
+    background: chocolate;
+     color: beige;
+}
+
+body {
+    padding-bottom: 90px;
+}
+
+a {
+    color:gray;
+}
+@media screen and (max-width: 767px) {
+ .bgbeige{
+    background: beige;
+    height: 800px;
+}   
+    
+}
+.espaco {
+    padding-top: 100px;
+}

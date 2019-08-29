@@ -1,0 +1,97 @@
+
+
+
+
+-----------------------------------------
+Create table Cadastro (
+
+comentario_id int primary key auto_increment,
+nome char(100),
+email char(100),
+Comentario text,
+data char(30),
+visivel char(1))
+
+
+
+-----------------------------------------
+<?
+$conexao = mysql_connect("dbmy0013.whservidor.com" , "raindropwe" , "********");
+$banco = mysql_select_db("raindropwe");
+?>
+
+<?
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$site = $_POST['site'];
+$comentario = $_POST ['comentario'];
+$data = date('Y-m-d');
+$inserir = mysql_query("insert into comentarios (nome, email, site, comentario, data) values ('$nome', '$email', '$site', '$comentario', '$data')");
+
+if($nome == null) {
+echo "Favor, inserir o nome";
+exit ();
+}
+if($email == null) {
+echo "Favor, inserir e-mail";
+exit ();
+}
+if($comentario == null) {
+echo "Favor, inserir seu comentario";
+exit ();
+}
+
+if($inserir > 0){
+echo "<script>window.location.href='comentarios.php'</script>";
+}
+
+?>
+----------------------------------------
+
+<html>
+<head>
+</head>
+<body>
+
+<?php
+
+$conexao = mysql_connect("dbmy0013.whservidor.com" , "raindropwe" , "********");
+$banco = mysql_select_db("raindropwe");
+
+?>
+
+<?php
+
+$sql = "select * from comentarios order by id desc";
+$executar = mysql_query ($sql);
+while ($exibir = mysql_fetch_array ($executar)){;
+
+echo "<strong>Nome:</strong>".$exibir ["nome"];
+echo "<br/>";
+echo "<strong>E-mail:</strong>".$exibir ["email"];
+echo "<br/>";
+echo "<strong>Site/Blog:</strong>".$exibir ["site"];
+echo "<br/>";
+echo "<strong>Data:</strong>".$exibir ["data"];
+echo "<br/>";
+echo "<strong>Comentário:</strong>".$exibir ["comentario"];
+echo "<br/><br /><br />";
+}
+<br /><br /><br />
+
+<form name="form" method="post" action="enviar_coment.php" enctype="multipart/form-data"> 
+Nome: <input type="text" name="nome"> 
+<br /> 
+E-mail: <input type="text" name="email">  
+<br /> 
+Site/Blog: <input type="text" name="site">  
+<br /> 
+Comentário: <textarea name="comentario"> 
+</textarea> 
+<br /> 
+<input type="submit" value="postar"> 
+</form> 
+
+</body>
+</html>
+?>

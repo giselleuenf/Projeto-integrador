@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.margem{
+	      margin: auto;
+	      height: 100%;
+	      background-color: rgb(0, 0, 0);
+	      font-size: 20px;
+	      font-family: Agency FB, Arial;
+	  }
+.nav{
+	background-color:rgb(239, 228, 176);
+}
+
+.nav ul li{display: inline;
+}
+.nav ul li a{
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 22px;
+	padding: 14px 25px;
+	text-align: center;
+
+}
+
+.nav ul li a:hover{color:rgb(39, 48, 148);
+
+}
+.imagem{background-color:rgb(32, 129, 153);
+
+}
+.imagem img {
+	margin: center;
+	
+}
+.imagem img:hover{
+	box-shadow: 10px rgba(0, 0, 0, 0.9);
+}
+
+.menu{	background-color: rgb(239, 228, 176);
+		text-align: center;
+}
+.menu img{
+	width: 100px;
+	height: 100px;
+}
+.arq{
+		background-color: rgb(239, 228, 176);
+		text-align: center;
+}
+.cometario{
+	background-color: rgb(239, 228, 176);
+}
+.com{
+		font-family: Arial;
+		font-size: 15px;
+}
+.roda{	background-color:rgb(32, 129, 153);
+	    font-size: 15px;
+	    font-family: Agency FB;
+}
+.botao{
+	width: 80px;
+	height: 35px;
+}
